@@ -1,0 +1,433 @@
+/* 全局公共样式 */
+
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+
+/* table单元格样式 */
+
+.column {
+    height: 44px;
+    text-align: left;
+}
+
+
+/* iview的Page分页组件改变样式 */
+
+.ivu-page {
+    padding: 7px 20px 7px 10px;
+    background-color: #fff;
+}
+
+
+/* 页脚样式 */
+
+.layout-footer-center {
+    text-align: center;
+    height: 40px;
+    font-size: 12px;
+    line-height: 2px;
+}
+
+
+/* 每个页面最外层公共样式 */
+
+.big_box {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 18px;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+
+/*报表计划页执行状态的不同颜色*/
+
+.grey {
+    width: 100px;
+    padding: 2px 0;
+    border-radius: 4px;
+    text-align: center;
+    background: #c3cbd6;
+}
+
+.yellow {
+    width: 100px;
+    padding: 2px 0;
+    border-radius: 4px;
+    text-align: center;
+    background: #ff9900;
+    color: #fff;
+}
+
+.green {
+    width: 100px;
+    padding: 2px 0;
+    border-radius: 4px;
+    text-align: center;
+    background: #00cc66;
+    color: #fff;
+}
+
+.red {
+    width: 100px;
+    padding: 2px 0;
+    border-radius: 4px;
+    text-align: center;
+    background: red;
+    color: #fff;
+}
+
+
+/* 隐藏显示切换 */
+
+.none {
+    display: none;
+}
+
+
+/* 红星 */
+
+.redStar::before {
+    content: '*';
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 1;
+    font-family: SimSun;
+    font-size: 14px;
+    color: #ed4014;
+}
+
+
+/* 隐藏类名 */
+
+.hide {
+    display: none;
+}
+
+
+/* 滑上变红 */
+
+.hoverRed:hover {
+    color: #ff2f1e;
+    cursor: pointer;
+}
+
+
+/* 下拉多选超出省略号 */
+
+.ivu-select-multiple .ivu-select-selection div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* 超链接下载 */
+
+.down {
+    cursor: pointer;
+    color: #2d8cf0;
+}
+
+
+/*隐藏滚动条*/
+
+.report_box::-webkit-scrollbar {
+    display: none;
+}
+
+.report_box {
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+    scrollbar-base-color: white;
+    scrollbar-3dlight-color: white;
+    scrollbar-highlight-color: white;
+    scrollbar-track-color: white;
+    scrollbar-arrow-color: white;
+    scrollbar-shadow-color: white;
+    scrollbar-dark-shadow-color: white;
+    scrollbar-width: none;
+}
+
+
+/* Modal弹框标题样式更改 */
+
+.ivu-modal-header-inner {
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/*滚动条整体样式*/
+
+.stepBox::-webkit-scrollbar,
+.ivu-tabs::-webkit-scrollbar,
+.ivu-poptip-body::-webkit-scrollbar {
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+
+/*滚动条里面小方块*/
+
+.stepBox::-webkit-scrollbar-thumb,
+.ivu-tabs::-webkit-scrollbar-thumb,
+.ivu-poptip-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(226, 216, 216, 0.815);
+    background: #c5c3c3;
+}
+
+
+/*滚动条里面轨道*/
+
+.stepBox::-webkit-scrollbar-track,
+.ivu-tabs::-webkit-scrollbar-track,
+.ivu-poptip-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(243, 232, 232, 0.774);
+    border-radius: 10px;
+    background: #ededed;
+}
+
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value,
+.ivu-select-dropdown-list {
+    text-align: left;
+}
+
+.ivu-select-multiple .ivu-select-item-selected:after {
+    right: 3px;
+}
+
+.ivu-select-item {
+    padding-right: 24px;
+}
+
+
+/* loading样式 */
+
+.demo-spin-icon-load {
+    animation: ani-demo-spin 1s linear infinite;
+}
+
+@keyframes ani-demo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.demo-spin-col {
+    height: 100px;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+
+/* tabs竖向滚动条 */
+
+.ivu-tabs {
+    height: 100%;
+}
+
+
+/* 日历插件样式 */
+
+.wh_content_all {
+    border: none;
+}
+
+.wh_top_changge {
+    background-color: #fff;
+}
+
+.wh_top_changge li,
+.wh_content_item {
+    color: #515a6e!important;
+}
+
+.wh_jiantou2 {
+    border-top: 2px solid #515a6e!important;
+    border-right: 2px solid #515a6e!important;
+}
+
+.wh_jiantou1 {
+    border-top: 2px solid #515a6e!important;
+    border-left: 2px solid #515a6e!important;
+}
+
+.wh_content_all {
+    background-color: #fff!important;
+}
+
+.wh_content_item .wh_chose_day {
+    background-color: #2d8cf0 !important;
+    color: #fff;
+}
+
+.wh_content_item .wh_isToday {
+    background-color: rgb(233, 229, 229)!important;
+}
+
+.wh_item_date:hover {
+    background: #f5f5f5!important;
+    color: #000;
+}
+
+
+/* 轮播图下面的指示器 */
+
+.ivu-carousel-dots-inside {
+    bottom: -23px!important;
+}
+
+.ivu-steps {
+    display: flex!important;
+    flex-direction: column!important;
+}
+
+
+/* tabs改变样式 */
+
+.ivu-tabs-bar {
+    margin-bottom: 0px;
+}
+
+.ivu-tabs {
+    overflow-y: auto;
+}
+
+.time_line {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* 中屏 */
+
+@media screen and (min-width:992px) and (max-width:1366px) {
+    body {
+        font-size: 14px!important
+    }
+    .ivu-menu-item,
+    .ivu-menu-submenu-title {
+        font-size: 14px!important;
+        font-weight: bold;
+    }
+    .wh_top_changge {
+        height: 30px;
+        align-items: center;
+    }
+    .wh_top_changge li {
+        height: 14px!important;
+        font-size: 14px!important;
+    }
+    .wh_content_item {
+        font-size: 12px!important;
+    }
+    .ivu-tabs-bar {
+        margin-bottom: 4px!important;
+    }
+    .ivu-page-next,
+    .ivu-page-prev,
+    .ivu-page-item {
+        border: none;
+    }
+    .ivu-page-total {
+        margin-right: 0;
+    }
+    .ivu-page-item-jump-next,
+    .ivu-page-item-jump-prev,
+    .ivu-page-next,
+    .ivu-page-prev,
+    .ivu-page-item {
+        min-width: 16px!important;
+    }
+    .notice_announce .li {
+        font-size: 13px!important;
+    }
+    #marquee {
+        width: 40%;
+    }
+    .time_line {
+        margin-top: 120px;
+    }
+    .ivu-poptip-popper {
+        font-size: 12px!important;
+    }
+    .ivu-poptip-body {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+    .callme {
+        margin: 0 auto;
+    }
+}
+
+
+/* 大屏电脑 */
+
+@media screen and (min-width:1367px) {
+    body {
+        font-size: 14px!important
+    }
+    .ivu-menu-item,
+    .ivu-menu-submenu-title {
+        font-size: 16px!important;
+        font-weight: bold;
+    }
+    #marquee {
+        width: 56%;
+    }
+    .time_line {
+        margin-top: 200px;
+    }
+    .ivu-poptip-body {
+        max-height: 260px;
+        padding: 8px;
+    }
+    .callme {
+        margin: 40px 20px;
+        font-size: 16px;
+    }
+}
